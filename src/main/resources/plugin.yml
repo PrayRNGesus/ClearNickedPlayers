@@ -1,0 +1,13 @@
+name: ClearNicks
+main: me.pray.ClearNicks
+version: 1.0
+description: Premium plugin made for VanillaPlus
+author: Pray
+website: praydev.xyz
+api-version: 1.17
+
+softdepend: [Essentials]
+
+commands:
+  clearnicks:
+
