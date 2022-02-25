@@ -4,6 +4,7 @@ import com.earth2me.essentials.Essentials;
 import me.pray.ClearNicks;
 import net.ess3.api.IUser;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,6 +21,12 @@ public class PlayerJoin implements Listener {
         if (user.getFormattedNickname() != null) {
             if (!player.hasPermission("essentials.nick")) {
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "nick " + user.getName() + " off");
+                return;
+            }
+
+            if(!ChatColor.stripColor(user.getFormattedNickname()).equals(user.getName())) {
+                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "nick " + user.getName() + " off");
+                return;
             }
         }
     }
