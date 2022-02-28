@@ -33,7 +33,7 @@ public class ClearNicksCommand implements CommandExecutor {
                     continue;
                 }
 
-                if(!ChatColor.stripColor(user.getFormattedNickname()).equals(user.getName())) {
+                if (!ChatColor.stripColor(user.getFormattedNickname()).equals(user.getName())) {
                     Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "nick " + user.getName() + " off");
                     i++;
                 }

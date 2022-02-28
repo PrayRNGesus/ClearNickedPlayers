@@ -15,9 +15,9 @@ public class ClearNicks extends JavaPlugin {
     public void onEnable() {
         plugin = this;
 
-        if(essentials == null) {
+        if (essentials == null) {
             System.out.println("---------------------------------------------------------------");
-            System.out.println("No plugin named: Essentials found, disabling.");
+            System.out.println("No plugin named: \"Essentials\" found, please add it to your server.");
             System.out.println("---------------------------------------------------------------");
             this.setEnabled(false);
         }
